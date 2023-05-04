@@ -7,15 +7,15 @@ import "./styles/styles.css";
 
 function App() {
   return (
-    <BrowserRouter>
-      {/* <div className="container"> */}
+    // <div className="container">
+      <BrowserRouter>
         <Routes>
-          <Route path="/" element={<MainPage />}/>
-          <Route path="/ourTeam" element={<OurTeamPage />}/>
-          <Route path="/ourTeam/PartnerPage/:id" element={<PartnerPage />}/>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/ourTeam" element={<OurTeamPage />} />
+          <Route path="/ourTeam/PartnerPage/:id" element={<PartnerPage />} />
         </Routes>
-      {/* </div> */}
-    </BrowserRouter>
+      </BrowserRouter>
+    // </div>
   );
 }
 

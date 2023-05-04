@@ -4,7 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { Link } from "react-router-dom";
-import MyInput from "./MyInput/MyInput";
+// import MyInput from "./MyInput/MyInput";
 
 const schema = yup.object({
   name: yup.string().required("Обязательно для заполнения"),
@@ -38,7 +38,7 @@ const MyForm = () => {
       <h1>Регистрация</h1>
       <label htmlFor="name">
         <span>Имя</span>
-        <MyInput
+        <input
           type="text"
           id="name"
           style={errors.name && { border: "1px solid #FF6161" }}
@@ -48,7 +48,7 @@ const MyForm = () => {
       </label>
       <label htmlFor="email">
         <span>Электронная почта</span>
-        <MyInput
+        <input
           type="email"
           id="email"
           {...register("email", { required: true })}
@@ -58,7 +58,7 @@ const MyForm = () => {
       </label>
       <label htmlFor="password">
         <span>Пароль</span>
-        <MyInput
+        <input
           type="password"
           id="password"
           style={errors.password && { border: "1px solid #FF6161" }}
